@@ -37,6 +37,12 @@ class Cards extends Component {
     render() {
         const { jobs } = this.props;
         const { ajoutationModalOpened } = this.state;
+        console.log(jobs);
+
+        /*let arrayJobs = Object.keys(jobs).map(function (cle) {
+            return [Number(cle), jobs[cle]];
+        })
+        console.log(arrayJobs.map(data => data.companyId));*/
 
         return (
             <div>
