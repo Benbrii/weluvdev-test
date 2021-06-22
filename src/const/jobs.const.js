@@ -1,0 +1,4 @@
+export const GET_JOBS = "GET_JOBS";
+export const GET_JOBS_FULFILLED = "GET_JOBS_FULFILLED";
+export const GET_JOBS_PENDING = "GET_JOBS_PENDING";
+export const GET_JOBS_REFUSED = "GET_JOBS_REFUSED";
