@@ -12,19 +12,19 @@ const jobsInfo = (state = initialState, action) => {
         // GET_JOBS
 
         case jobsConst.GET_JOBS:
-            return { ...state, job: action.payload };
+            return { ...state, jobs: action.payload };
 
         case jobsConst.GET_JOBS_FULFILLED:
             return {
                 ...state,
-                job: action.payload.data,
+                jobs: action.payload.data,
                 isLoading: false
             };
 
         case jobsConst.GET_JOBS_PENDING:
             return {
                 ...state,
-                job: action.payload,
+                jobs: action.payload,
                 isLoading: true
             };
 
