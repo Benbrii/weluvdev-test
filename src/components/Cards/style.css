@@ -1,0 +1,10 @@
+.cards_container {
+    display: flex;
+    margin: 5%;
+}
+
+.cards_title {
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}

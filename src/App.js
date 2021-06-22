@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import "./App.css";
 
 import { getJobs } from "./actions/jobs.action";
 
 import TopNavBar from "./components/TopNavBar";
+import Cards from "./components/Cards";
 
 class ConnectedApp extends Component {
 
@@ -15,9 +15,9 @@ class ConnectedApp extends Component {
   render() {
 
     return (
-      <div className="page">
+      <div>
         <TopNavBar />
-
+        <Cards />
       </div>
     );
   }
