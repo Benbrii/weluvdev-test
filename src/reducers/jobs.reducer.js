@@ -1,7 +1,7 @@
 import * as jobsConst from "../const/jobs.const";
 
 const initialState = {
-    jobs: [],
+    alljobs: [],
     isLoading: false
 };
 
@@ -12,19 +12,22 @@ const jobsInfo = (state = initialState, action) => {
         // GET_JOBS
 
         case jobsConst.GET_JOBS:
-            return { ...state, jobs: action.payload };
+            return {
+                ...state,
+                alljobs: action.payload
+            };
 
         case jobsConst.GET_JOBS_FULFILLED:
             return {
                 ...state,
-                jobs: action.payload.data,
+                alljobs: action.payload.data,
                 isLoading: false
             };
 
         case jobsConst.GET_JOBS_PENDING:
             return {
                 ...state,
-                jobs: action.payload,
+                alljobs: action.payload,
                 isLoading: true
             };
 

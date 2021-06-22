@@ -1,41 +1,24 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
+import { createBrowserHistory } from "history";
+import { Router, Route } from "react-router-dom";
 
-import { getJobs } from "./actions/jobs.action";
+import Main from "./views/Main";
 
-import TopNavBar from "./components/TopNavBar";
-import Cards from "./components/Cards";
+export const history = createBrowserHistory();
 
-class ConnectedApp extends Component {
-
-  componentDidMount() {
-    this.props.getJobs();
-  }
+class App extends Component {
 
   render() {
 
     return (
       <div>
-        <TopNavBar />
-        <Cards />
+        <Router history={history}>
+          <Route exact path="/" component={Main} />
+        </Router>
       </div>
     );
   }
 }
 
-const mstp = state => {
-  return {
-    jobs: state.jobsInfo.jobs
-  }
-}
-
-const mdtp = dispatch => ({
-  getJobs: () => dispatch(getJobs())
-})
-
-const App = connect(
-  mstp,
-  mdtp
-)(ConnectedApp)
 
 export default App;
